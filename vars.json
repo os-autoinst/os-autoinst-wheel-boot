@@ -1,0 +1,11 @@
+{
+   "BACKEND" : "qemu",
+   "CASEDIR" : ".",
+   "JOBTOKEN" : "BQNVliQguY",
+   "PRODUCTDIR" : ".",
+   "QEMUPORT" : 15222,
+   "QEMU_NO_KVM" : "1",
+   "SCHEDULE" : "tests/wheels/boot",
+   "VNC" : 90,
+   "_EXIT_AFTER_SCHEDULE" : "1"
+}
