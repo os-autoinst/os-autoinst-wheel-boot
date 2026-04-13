@@ -4,6 +4,8 @@ name: isotovideo
 on: [push, pull_request]
 jobs:
   schedule:
+    permissions:
+      contents: read
     runs-on: ubuntu-20.04
     container:
       image: "registry.opensuse.org/devel/openqa/containers-tw/isotovideo:qemu-x86"
