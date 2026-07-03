@@ -6,17 +6,17 @@ jobs:
   schedule:
     permissions:
       contents: read
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     container:
-      image: "registry.opensuse.org/devel/openqa/containers-tw/isotovideo:qemu-x86"
+      image: "registry.opensuse.org/devel/openqa/containers/isotovideo:qemu-x86"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5  # v2
       - name: Verify the test schedule including wheels
         run: ./test
         env:
           WITH_COVER_OPTIONS: 1
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f  # v7
         with:
           # should not be necessary for public repos, but might help avoid sporadic upload token errors
           token: ${{ secrets.CODECOV_TOKEN }}
